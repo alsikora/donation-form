@@ -1,0 +1,39 @@
+.button {
+    font-family: "Work Sans", sans-serif;
+    font-size: 1em;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 20px;
+    text-align: center;
+    height: 52px;
+    padding: 16px 24px 16px 24px;
+    border-radius: 5px;
+    border: 1px solid;
+}
+
+.light {
+    border: 1px solid rgba(89, 93, 123, 1);
+    background-color: #ffffff;
+    color: rgba(89, 93, 123, 1);
+}
+
+.light:hover {
+    background: rgba(178, 167, 244, 0.1);
+}
+
+.light:active {
+    background: rgba(178, 167, 244, 0.25);
+}
+
+.dark {
+    background-color: #423C66;
+    color: #FFFFFF;
+}
+
+.dark:hover {
+    background-color: #645D93;
+}
+
+.dark:active {
+    background-color: #241E47;
+}
