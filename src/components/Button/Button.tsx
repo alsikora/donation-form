@@ -6,8 +6,9 @@ interface ButtonProps {
 }
 
 const Button = ({title, theme = 'light'}: ButtonProps) => {
+  const buttonType: string = `button--${theme}`
   return (
-      <button className={`${styles.button} ${styles[theme]}`} type={'button'}>{title}</button>
+      <button className={`${styles.button} ${styles[buttonType]}`} type={'button'}>{title}</button>
   )
 }
 

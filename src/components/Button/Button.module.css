@@ -9,31 +9,33 @@
     padding: 16px 24px 16px 24px;
     border-radius: 5px;
     border: 1px solid;
+    margin: 8px;
+    flex-grow: 1;
 }
 
-.light {
+.button--light {
     border: 1px solid rgba(89, 93, 123, 1);
     background-color: #ffffff;
     color: rgba(89, 93, 123, 1);
 }
 
-.light:hover {
+.button--light:hover {
     background: rgba(178, 167, 244, 0.1);
 }
 
-.light:active {
+.button--light:active {
     background: rgba(178, 167, 244, 0.25);
 }
 
-.dark {
+.button--dark {
     background-color: #423C66;
     color: #FFFFFF;
 }
 
-.dark:hover {
+.button--dark:hover {
     background-color: #645D93;
 }
 
-.dark:active {
+.button--dark:active {
     background-color: #241E47;
 }

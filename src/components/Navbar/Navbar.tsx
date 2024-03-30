@@ -5,7 +5,7 @@ function Navbar() {
   return (
       <div className={styles.navbar}>
         <a href="https://www.shift4.com/" target="_blank">
-          <img src={logo} className={styles.logo} alt="Natur.ally logo"/>
+          <img src={logo} className={styles.navbar__logo} alt="Natur.ally logo"/>
         </a>
       </div>
   );
