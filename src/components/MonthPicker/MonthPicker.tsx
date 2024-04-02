@@ -17,7 +17,7 @@ function MonthPicker({onChange}: MonthPickerProps) {
     const date: Date = new Date(selectedYear, selectedMonth);
     onChange(date);
     setFinalDate(date)
-  }, [selectedYear, selectedMonth, onChange]);
+  }, [selectedYear, selectedMonth]);
 
   useEffect((): void => {
     finalDate && setPrevDisabled(TODAY >= finalDate);

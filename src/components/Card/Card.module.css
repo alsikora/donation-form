@@ -79,3 +79,63 @@
     mask-image: url("../../assets/givingBlock.svg");
     margin-right: 16px;
 }
+
+.donation {
+    display: inline-flex;
+    justify-content: space-between;
+    gap: 24px
+}
+
+.donation__label {
+    font-family: "Work Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #4D6475;
+    margin-bottom: 6px;
+    display: inline-block;
+}
+
+.donation__amount {
+    border: 1px solid #E9EEF2;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 16px 16px 40px;
+    font-family: "Rubik", sans-serif;
+    font-size: 1.5em;
+    font-weight: 500;
+    color: #595D7B;
+    line-height: 28px;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.donation__amount:focus {
+    border: 1px solid #423C66;
+}
+
+.donation__amount::placeholder {
+    color: #EEEEEE;
+    opacity: 1;
+}
+
+.donation__donate, .donation__month {
+    flex: 0 0 calc(50% - 12px);
+    position: relative;
+}
+
+.icon--dollar {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    mask-size: 100%;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-color: #4D6475;
+    mask-image: url("../../assets/dollar.svg");
+    position: absolute;
+    left: 8px;
+    bottom: 19px;
+}

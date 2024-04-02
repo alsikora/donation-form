@@ -1,4 +1,4 @@
-export const USDollar: Intl.NumberFormat = new Intl.NumberFormat('en-US');
+export const USDollar: Intl.NumberFormat = new Intl.NumberFormat('en-US', {style: 'decimal'});
 
 export const monthYearDate: Intl.DateTimeFormat = new Intl.DateTimeFormat('en-US', {
   month: 'long',
@@ -14,3 +14,5 @@ export const dateDifferenceInMonths = (dateInitial: Date, dateFinal: Date): numb
         dateInitial.getMonth(),
         0
     );
+
+export const parseAmountToNumber = (amount: string): number => parseInt(amount.replace(/,/g, ''), 10);

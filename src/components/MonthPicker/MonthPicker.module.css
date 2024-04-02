@@ -59,6 +59,7 @@
     font-size: 1em;
     font-weight: 600;
     color: #595D7B;
+    line-height: 20px;
 }
 
 .picker__year {
@@ -66,5 +67,6 @@
     font-size: 0.75em;
     font-weight: 400;
     color: #595D7B;
+    line-height: 16px;
 }
 
