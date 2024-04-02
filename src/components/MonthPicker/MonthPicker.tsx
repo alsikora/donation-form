@@ -17,7 +17,7 @@ function MonthPicker({onChange}: MonthPickerProps) {
     const date: Date = new Date(selectedYear, selectedMonth);
     onChange(date);
     setFinalDate(date)
-  }, [selectedYear, selectedMonth]);
+  }, [selectedYear, selectedMonth, onChange]);
 
   useEffect((): void => {
     finalDate && setPrevDisabled(TODAY >= finalDate);
@@ -43,14 +43,14 @@ function MonthPicker({onChange}: MonthPickerProps) {
 
   return (
       <div className={styles.picker}>
-        <button type={'button'} onClick={prev} className={styles.picker__navigation} disabled={prevDisabled}>
+        <button type={'button'} onClick={prev} className={styles.picker__navigation} disabled={prevDisabled} aria-label="previous">
           <span className={`${styles.icon} ${styles['icon--previous']}`}/>
         </button>
         <div className={styles.picker__date}>
           <div className={styles.picker__month}>{monthDate.format(finalDate)}</div>
           <div className={styles.picker__year}>{selectedYear}</div>
         </div>
-        <button type={'button'} onClick={next} className={styles.picker__navigation}>
+        <button type={'button'} onClick={next} className={styles.picker__navigation} aria-label="next">
           <span className={`${styles.icon} ${styles['icon--next']}`}/>
         </button>
       </div>
