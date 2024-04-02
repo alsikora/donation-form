@@ -1,0 +1,70 @@
+.icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    mask-size: 100%;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-color: #4D6475;
+}
+
+.icon--previous {
+    mask-image: url("../../assets/chevron_left.svg");
+}
+
+.icon--next {
+    mask-image: url("../../assets/chevron_right.svg");
+}
+
+.picker {
+    border: 1px solid #E9EEF2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+}
+
+.picker__navigation {
+    width: 24px;
+    height: 24px;
+    background-color: #FFFFFF;
+    border: none;
+    padding: 0;
+    border-radius: 5px;
+}
+
+.picker__navigation:hover {
+    background-color: #F3F5FE;
+}
+
+.picker__navigation:active {
+    background-color: #E8EAF2;
+}
+
+.picker__navigation:disabled, .picker__navigation:disabled:hover, .picker__navigation:disabled:active {
+    cursor: not-allowed;
+    background-color: #FFFFFF;
+    opacity: 0.5;
+}
+
+.picker__date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.picker__month {
+    font-family: "Rubik", sans-serif;
+    font-size: 1em;
+    font-weight: 600;
+    color: #595D7B;
+}
+
+.picker__year {
+    font-family: "Work Sans", sans-serif;
+    font-size: 0.75em;
+    font-weight: 400;
+    color: #595D7B;
+}
+
