@@ -15,4 +15,4 @@ export const dateDifferenceInMonths = (dateInitial: Date, dateFinal: Date): numb
         0
     );
 
-export const parseAmountToNumber = (amount: string): number => parseInt(amount.replace(/,/g, ''), 10);
+export const parseAmountToNumber = (amount: string): number => parseInt(amount.replace(/,/g, ''), 10) || 0;

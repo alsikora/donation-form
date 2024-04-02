@@ -3,17 +3,17 @@ import { TODAY } from '../../utils/constants.ts';
 import Button from '../Button/Button.tsx';
 import MonthPicker from '../MonthPicker/MonthPicker.tsx';
 import styles from './Card.module.css';
-import { ChangeEvent, useState } from 'react';
+import { ChangeEvent, useCallback, useState } from 'react';
 
 function Card() {
   const [monthNum, setMonthNum] = useState<number>(0)
   const [finalDate, setFinalDate] = useState<Date>();
   const [amount, setAmount] = useState<string>('');
 
-  const handleDateChange = (date: Date): void => { //callback or memo??
+  const handleDateChange = useCallback((date: Date): void => {
     setMonthNum(dateDifferenceInMonths(TODAY, date));
     setFinalDate(date);
-  }
+  }, []);
 
   const handleAmountChange = (e: ChangeEvent<HTMLInputElement>): void => {
     const value: number = parseAmountToNumber(e.target.value);
@@ -50,11 +50,11 @@ function Card() {
               <div className={styles.content__total}>
                 <span className={styles.content__label}>Total amount</span>
                 <span className={styles.content__amount}>
-                  ${USDollar.format(parseAmountToNumber(amount) * monthNum || 0)}
+                  ${USDollar.format(parseAmountToNumber(amount) * monthNum)}
                 </span>
               </div>
               <p className={styles.content__summary}>You will be
-                sending <strong>${USDollar.format(parseAmountToNumber(amount) || 0)}</strong> every month,
+                sending <strong>${USDollar.format(parseAmountToNumber(amount))}</strong> every month,
                 until <strong>{monthYearDate.format(finalDate)}</strong>. Thank you!</p>
             </div>
             <div className={styles.card__actions}>

@@ -1,5 +1,7 @@
+@import "../../vars.css";
+
 .button {
-    font-family: "Work Sans", sans-serif;
+    font-family: var(--font-family-work);
     font-size: 1em;
     font-weight: 600;
     font-style: normal;
@@ -7,16 +9,16 @@
     text-align: center;
     height: 52px;
     padding: 16px 24px 16px 24px;
-    border-radius: 5px;
+    border-radius: var(--radius);
     border: 1px solid;
     margin: 8px;
     flex-grow: 1;
 }
 
 .button--light {
-    border: 1px solid rgba(89, 93, 123, 1);
-    background-color: #ffffff;
-    color: rgba(89, 93, 123, 1);
+    border: 1px solid var(--color-purple);
+    background-color: var(--color-white);
+    color: var(--color-purple);
 }
 
 .button--light:hover {
@@ -28,14 +30,14 @@
 }
 
 .button--dark {
-    background-color: #423C66;
-    color: #FFFFFF;
+    background-color: var(--color-midnight-purple);
+    color: var(--color-white);
 }
 
 .button--dark:hover {
-    background-color: #645D93;
+    background-color: var(--color-light-purple);
 }
 
 .button--dark:active {
-    background-color: #241E47;
+    background-color: var(--color-dark-purple);
 }

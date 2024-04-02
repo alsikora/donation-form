@@ -1,0 +1,14 @@
+:root {
+    --color-purple: #595D7B;
+    --color-midnight-purple: #423C66;
+    --color-light-purple: #645D93;
+    --color-dark-purple: #241E47;
+    --color-grey: #4D6475;
+    --color-dark-grey: #1E2A32;
+    --color-salmon: #FFDBCB;
+    --color-white: #FFFFFF;
+    --color-bg: #F4F8FA;
+    --radius: 5px;
+    --font-family-work: "Work Sans", sans-serif;
+    --font-family-rubik: "Rubik", sans-serif;
+}
