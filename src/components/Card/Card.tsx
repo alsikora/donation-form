@@ -23,7 +23,8 @@ function Card() {
   return (
       <div className={styles.card}>
         <div className={styles.card__header}>
-          <span className={styles.icon}/>
+          <span className={`${styles.icon} ${styles["icon--close"]}`}/>
+          <span className={`${styles.icon} ${styles["icon--giving"]}`}/>
           <div>
             <h1 className={styles.card__title}>The giving block</h1>
             <h3 className={styles.card__subtitle}>Set up your donation goal!</h3>
@@ -34,7 +35,7 @@ function Card() {
             <div>
               <div className={styles.donation}>
                 <div className={styles.donation__donate}>
-                  <span className={styles["icon--dollar"]}/>
+                  <span className={`${styles.icon} ${styles["icon--dollar"]}`}/>
                   <label htmlFor="donate" className={styles.donation__label}>I can donate</label>
                   <input className={styles.donation__amount}
                          value={amount}
@@ -47,15 +48,17 @@ function Card() {
                   <MonthPicker onChange={handleDateChange}/>
                 </div>
               </div>
-              <div className={styles.content__total}>
-                <span className={styles.content__label}>Total amount</span>
-                <span className={styles.content__amount}>
+              <div className={styles["content__total-summary"]}>
+                <div className={styles.content__total}>
+                  <span className={styles.content__label}>Total amount</span>
+                  <span className={styles.content__amount}>
                   ${USDollar.format(parseAmountToNumber(amount) * monthNum)}
                 </span>
+                </div>
+                <p className={styles.content__summary}>You will be
+                  sending <strong>${USDollar.format(parseAmountToNumber(amount))}</strong> every month,
+                  until <strong>{monthYearDate.format(finalDate)}</strong>. Thank you!</p>
               </div>
-              <p className={styles.content__summary}>You will be
-                sending <strong>${USDollar.format(parseAmountToNumber(amount))}</strong> every month,
-                until <strong>{monthYearDate.format(finalDate)}</strong>. Thank you!</p>
             </div>
             <div className={styles.card__actions}>
               <Button title={'Cancel'} theme={'light'}/>
